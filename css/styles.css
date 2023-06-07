@@ -60,8 +60,34 @@ button {
   font-family: inherit;
   cursor: pointer;
 }
-/* ================= HEADER ================= */
 
+.container {
+  max-width: 428px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.nav {
+  display: none;
+}
+.main-adress {
+  display: none;
+}
 .page-header {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -70,22 +96,31 @@ button {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
-
 .page-header-container {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
 }
+.mobile-open-button {
+  border-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+}
+/* ================= HEADER ================= */
+
+/* 
+
+
 
 .page-navigation {
   display: flex;
-  /* column-gap: 76px; */
+
   align-items: center;
 }
 .nav {
   display: flex;
   gap: 40px;
-  /* padding-top: 24px;
-  padding-bottom: 24px; */
+
 }
 
 .main-adress > ul {
@@ -166,7 +201,7 @@ button {
 .adress-item-link:focus {
   color: var(--hover-state-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 /* ================= LOGO ================= */
 
