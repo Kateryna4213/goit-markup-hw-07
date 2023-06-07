@@ -206,7 +206,7 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office-bg.jpg);
+    url(../images/background/hero-desktop.jpg);
   background-size: cover;
   background-color: var(--background-color-theme-dark);
   padding: 188px 0;
@@ -217,6 +217,13 @@ button {
   background-position: center;
 }
 
+@media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .herp-section {
+    background-image: url();
+  }
+}
 .hero-title {
   font-weight: 700;
   font-size: 56px;
@@ -257,9 +264,9 @@ button {
   padding-bottom: 120px;
 }
 
-/* /----------HERO ----------*/
+/* /================= HERO =================*/
 
-/* ================= The second section ================= */
+/* ================= THE SECOND SECTION ================= */
 
 .visually-hidden {
   position: absolute;
@@ -313,16 +320,18 @@ button {
   letter-spacing: 0.02em;
   color: var(--secondary-text-color-theme-light);
 }
+/* / ================= THE SECOND SECTION ================= */
 
-/* The third section */
+/* ================= THE THIRD SECTION ================= */
 
 .activities-container {
   /* margin-top: 0; */
   padding-top: 0px;
   padding-bottom: 120px;
 }
+/* / ================= THE THIRD SECTION ================= */
 
-/*  ------------COMPONENTS -----------*/
+/*  ================= COMPONENTS =================*/
 .secondary-title {
   font-weight: 700;
   font-size: 36px;
@@ -342,9 +351,9 @@ button {
   flex-basis: calc((100% - 48px) / 3);
 }
 
-/* / ------------COMPONENTS -----------*/
+/* / ================= COMPONENTS ================= */
 
-/* The forth section */
+/* ================= THE FORTH SECTION ================= */
 .team-list {
   display: flex;
   gap: 24px;
@@ -399,7 +408,7 @@ button {
   padding-top: 120px;
   padding-bottom: 120px;
 
-  /* / The forth section */
+  /* / ================= THE FORTH SECTION ================= */
 }
 
 /* =================THE FIFTH SECTION =================*/
@@ -443,9 +452,9 @@ button {
 .customers-section-list-svg {
   fill: currentColor;
 }
-/* =================THE FIFTH SECTION =================*/
+/* / =================THE FIFTH SECTION =================*/
 
-/* footer */
+/* ================= FOOTER =================*/
 .footer-container-box {
   display: flex;
   align-items: baseline;
@@ -564,7 +573,7 @@ button {
 .subscribe-field-btn:focus {
   background-color: var(--hover-state-color);
 }
-
+/* / ================= FOOTER =================*/
 /* =================PAGE PORTFOLIO=================  */
 
 .offers-list-item-link {
@@ -660,7 +669,7 @@ button {
 .offers-list-item-link:focus .overlay {
   transform: translateY(0%);
 }
-
+/* / =================PAGE PORTFOLIO=================  */
 /* =================MODAL WINDOW =================*/
 
 .backdrop {
@@ -721,7 +730,7 @@ button {
   visibility: hidden;
   pointer-events: none;
 }
-/* MODAL FORM */
+/* MODAL FORM DESKTOP */
 .contact-form-input-field {
   margin-bottom: 8px;
 }
