@@ -310,10 +310,51 @@ button {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.solutions-container {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
 
 .icons-lisst-item-container {
+  display: none;
+}
+.solutions-list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  row-gap: 72px;
+  justify-content: center;
+  align-items: center;
+}
+.solutions-list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: calc((100% - 72px) / 4);
+}
+.third-title-mobile-tablet {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color-theme-light);
+  margin-bottom: 8px;
+}
+
+.activities-container {
+  display: none;
+}
+/* .third-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color-theme-light);
+  margin-bottom: 8px;
+
+  .icons-lisst-item-container {
+  display: flex;
+  flex-direction: column;
   gap: 24px;
   align-items: center;
   justify-content: center;
@@ -323,33 +364,8 @@ button {
   margin-bottom: 8px;
   max-width: 264px;
 }
-
-.solutions-list {
-  display: flex;
-  flex-direction: row;
-  gap: 24px;
-  justify-content: center;
-  align-items: flex-end;
 }
-.solutions-list-item {
-  flex-basis: calc((100% - 72px) / 4);
-}
-
-.third-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color-theme-light);
-  margin-bottom: 8px;
-}
-.list-description {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--secondary-text-color-theme-light);
-}
+ */
 /* / ================= THE SECOND SECTION ================= */
 
 /* ================= THE THIRD SECTION ================= */
@@ -374,6 +390,13 @@ button {
   margin-left: auto;
   margin-right: auto;
 }
+.list-description {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color-theme-light);
+}
 .activities-list {
   display: flex;
   flex-direction: row;
@@ -383,10 +406,19 @@ button {
 
 /* / ================= COMPONENTS ================= */
 
-/* ================= THE FORTH SECTION ================= */
+/* ================= THE FORTH SECTION mobile ================= */
 .team-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 72px;
+  flex-basis: calc(100%-216px) / 4;
+}
+.team-list-item {
+  max-width: 264px;
+}
+/* ================= THE FORTH SECTION DESKTOP ================= */
+.team-list {
   flex-basis: calc(100%-72px) / 4;
 }
 .card-description-page-first {
@@ -441,11 +473,24 @@ button {
   /* / ================= THE FORTH SECTION ================= */
 }
 
-/* =================THE FIFTH SECTION =================*/
+/* mobile  */
 .customers-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
+.customers-section-list {
+  display: flex;
+  flex-direction: row;
+  column-gap: 16px;
+  row-gap: 72px;
+  flex-wrap: wrap;
+}
+.customers-section-list-item {
+  width: 190px;
+  height: 88px;
+}
+/* =================THE FIFTH SECTION =================*/
+
 .customers-section-titile {
   font-size: 36px;
   line-height: 1.1;
@@ -453,15 +498,11 @@ button {
   margin-bottom: 72px;
   text-align: center;
 }
-.customers-section-list {
-  display: flex;
-  flex-direction: row;
-  gap: 24px;
-}
-.customers-section-list-item {
+
+/* .customers-section-list-item {
   width: calc((100% - 120px) / 6);
-  height: 88px;
-}
+  
+} */
 .customers-section-list-item-link {
   width: 100%;
   height: 100%;
