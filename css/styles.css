@@ -50,12 +50,6 @@ body {
   background-color: var(--backgound-cards-color);
 }
 
-.container {
-  max-width: 1158px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
 button {
   font-family: inherit;
   cursor: pointer;
@@ -74,6 +68,13 @@ button {
 }
 .main-adress {
   display: none;
+}
+
+@media screen and (max-width: 1157px) {
+  .mobile-tablet-container {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
 }
 .page-header {
   padding-top: 24px;
@@ -120,6 +121,97 @@ button {
   color: var(--secondary-text-color-theme-dark);
 }
 /* / ================= LOGO ================= */
+/* ================mobile menu ================*/
+.mobile-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.mobile-menu-container {
+  position: relative;
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+}
+
+.mobile-menu-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border-radius: 50%;
+  padding: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e7e9fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+.mobile-menu-icon {
+  fill: #2e2f42;
+}
+.mobile-menu-modal-nav {
+  margin-bottom: 284px;
+}
+.mobile-menu-modal-nav-item {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--primary-text-color-theme-light);
+}
+.mobile-menu-modal-nav-item:hover,
+.mobile-menu-modal-nav-item:focus {
+  color: var(--hover-state-color);
+}
+.mobile-menu-modal-nav-item {
+  margin-bottom: 40px;
+}
+.contacts-mobile-field-item-number {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 111%;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+  margin-bottom: 40px;
+}
+.contacts-mobile-field {
+  margin-bottom: 48px;
+}
+.contacts-mobile-field-item-adress {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color-theme-light);
+}
+.mobile-links-icons-field {
+  display: flex;
+  gap: 56px;
+}
+.mobile-links-icons-field-item {
+  width: 40px;
+  height: 40px;
+}
+/* / ================mobile menu ================*/
 
 /* /================= HEADER ================= */
 
@@ -187,11 +279,6 @@ button {
   background-color: var(--hover-state-color);
 }
 
-.section {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-
 /* /================= HERO =================*/
 
 /* ================= THE SECOND SECTION ================= */
@@ -208,29 +295,31 @@ button {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.solutions-container {
-  padding-top: 96px;
-  padding-bottom: 96px;
-}
 
 .icons-lisst-item-container {
   display: none;
 }
 .solutions-list-item {
   text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #434455;
 }
-.solutions-list-item:not(:last-child) {
-  margin-bottom: 72px;
-}
+
 .list-description-solutions {
-  text-align: start;
+  text-align: left;
 }
 
 @media screen and (max-width: 767px) {
   .solutions-list-item {
     max-width: 396px;
   }
+  .solutions-list-item:not(:last-child) {
+    margin-bottom: 72px;
+  }
 }
+
 .third-title-mobile-tablet {
   font-weight: 500;
   font-size: 36px;
@@ -265,7 +354,7 @@ button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
+
   color: var(--secondary-text-color-theme-light);
 }
 .activities-list {
@@ -278,19 +367,19 @@ button {
 /* / ================= COMPONENTS ================= */
 
 /* ================= THE FORTH SECTION mobile ================= */
-
-.team-list-item:not(:last-child) {
-  margin-bottom: 72px;
+@media screen and (max-width: 767px) {
+  .team-list-item:not(:last-child) {
+    margin-bottom: 72px;
+  }
 }
+
 .team-list-item {
   margin-left: auto;
   margin-right: auto;
   max-width: 264px;
 }
-/* ================= THE FORTH SECTION DESKTOP ================= */
-/* .team-list {
-  flex-basis: calc(100%-72px) / 4;
-} */
+/* ================= THE FORTH SECTION  ================= */
+
 .card-description-page-first {
   padding: 32px 0px;
   text-align: center;
@@ -337,17 +426,12 @@ button {
 }
 .our-team {
   background: #f4f4fd;
-  padding-top: 120px;
-  padding-bottom: 120px;
 
   /* / ================= THE FORTH SECTION ================= */
 }
 
 /* mobile  */
-.customers-section {
-  padding-top: 96px;
-  padding-bottom: 96px;
-}
+
 .customers-section-list {
   display: flex;
   flex-direction: row;
@@ -404,8 +488,6 @@ button {
 }
 .footer-container {
   background-color: var(--background-color-theme-dark);
-  padding-top: 96px;
-  padding-bottom: 96px;
 }
 .footer-links-list {
   display: flex;
@@ -496,9 +578,7 @@ button {
 ::placeholder {
   color: #fff;
 }
-/* .subscribe-field-box-label {
-  margin-right: 24px;
-} */
+
 .subscribe-field-btn {
   width: 165px;
   padding: 8px 24px;
@@ -525,6 +605,7 @@ button {
   background-color: var(--hover-state-color);
 }
 /* / ================= FOOTER =================*/
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -574,10 +655,10 @@ button {
     width: 48px;
     height: 4px;
     background-color: var(--hover-state-color);
-    margin-top: 20px;
+    margin-top: 21px;
     border-radius: 2px;
     left: 0;
-    bottom: -1px;
+    animation: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .navigation-list-link-current-page-portfolio::after {
@@ -587,10 +668,9 @@ button {
     width: 66px;
     height: 4px;
     background-color: var(--hover-state-color);
-    margin-top: 20px;
+    margin-top: 21px;
     border-radius: 2px;
     left: 0;
-    bottom: -1px;
   }
 
   .navigation-list-link:hover,
@@ -621,8 +701,6 @@ button {
       ),
       url(../images/background/hero-tablet.jpg);
 
-    padding-top: 112px;
-    padding-bottom: 112px;
     max-width: 768px;
     height: 436px;
   }
@@ -649,10 +727,21 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    row-gap: 72px;
+    column-gap: 24px;
   }
   .solutions-list-item {
     flex-basis: calc((100% - 24px) / 2);
     max-width: 356px;
+    text-align: left;
+  }
+
+  .third-title {
+    font-weight: 700px;
+  }
+
+  .list-description-solutions-min {
+    max-width: 351px;
   }
   .team-list {
     display: flex;
@@ -680,19 +769,15 @@ button {
   }
   .footer-container-box {
     display: flex;
-
+    padding-left: 108px;
     flex-wrap: wrap;
     row-gap: 72px;
     column-gap: 24px;
   }
 
-  .footer-container-box-item {
-    flex-basis: calc((100% - 24px) / 2);
-  }
   .footer-container {
     padding-top: 96px;
     padding-bottom: 96px;
-    padding-left: 108px;
   }
   .footer-box-links {
     align-items: start;
@@ -716,6 +801,11 @@ button {
     padding-right: 15px;
     margin: 0 auto;
   }
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
   .mobile-open-button {
     display: none;
   }
@@ -772,17 +862,30 @@ button {
     flex-wrap: nowrap;
     gap: 24px;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
   }
   .solutions-list-item {
     flex-basis: calc((100% - 72px) / 4);
     max-width: 264px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 0px;
+  }
+  .activities-container {
+    padding-top: 0;
+  }
+  .list-description-solutions {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
   }
   .third-title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-
     margin-bottom: 8px;
   }
 
@@ -820,6 +923,9 @@ button {
   }
   .footer-box-links {
     margin-right: 80px;
+  }
+  .footer-container {
+    padding-left: 0px;
   }
 
   .footer-container-text {
@@ -933,6 +1039,7 @@ button {
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
   pointer-events: auto;
+  overflow-y: scroll;
   visibility: visible;
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
