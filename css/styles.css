@@ -76,8 +76,6 @@ button {
 	}
 }
 .page-header {
-	padding-top: 24px;
-	padding-bottom: 24px;
 	border-bottom: 1px solid var(--secondary-accent-color);
 	background: var(--backgound-cards-color);
 	box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -106,7 +104,7 @@ button {
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
 	color: var(--accent-color);
-	margin-right: 76px;
+	margin-right: 0;
 }
 .logo-header {
 	margin-bottom: 0;
@@ -139,9 +137,11 @@ button {
 }
 .mobile-menu-container {
 	position: relative;
-	padding-top: 80px;
-	padding-left: 40px;
-	padding-bottom: 40px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 80px 35px 40px 40px;
 }
 
 .mobile-menu-button {
@@ -164,9 +164,7 @@ button {
 .mobile-menu-icon {
 	fill: #2e2f42;
 }
-.mobile-menu-modal-nav {
-	margin-bottom: 284px;
-}
+
 .mobile-menu-modal-nav-item {
 	font-weight: 700;
 	font-size: 36px;
@@ -207,6 +205,11 @@ button {
 .mobile-links-icons-field-item {
 	width: 40px;
 	height: 40px;
+}
+.team-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 /* / ================mobile menu ================*/
 
@@ -365,8 +368,6 @@ button {
 }
 
 .team-list-item {
-	margin-left: auto;
-	margin-right: auto;
 	max-width: 264px;
 }
 /* ================= THE FORTH SECTION  ================= */
@@ -599,6 +600,7 @@ button {
 	.container {
 		max-width: 768px;
 	}
+
 	.nav {
 		display: flex;
 	}
@@ -614,8 +616,15 @@ button {
 	.page-header-container {
 		gap: 120px;
 	}
+	.main-adress {
+		display: block;
+	}
 	.nav-list-item {
 		position: relative;
+	}
+	.nav {
+		padding-top: 24px;
+		padding-bottom: 24px;
 	}
 	.navigation-list-link {
 		font-family: "Roboto", sans-serif;
@@ -624,7 +633,7 @@ button {
 		line-height: 1.5;
 		letter-spacing: 0.02em;
 		color: var(--primary-text-color-theme-light);
-		padding: 24px 0;
+
 		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
@@ -644,7 +653,8 @@ button {
 		width: 48px;
 		height: 4px;
 		background-color: var(--hover-state-color);
-		margin-top: 21px;
+		margin-top: 26px;
+
 		border-radius: 2px;
 		left: 0;
 		animation: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -657,7 +667,7 @@ button {
 		width: 66px;
 		height: 4px;
 		background-color: var(--hover-state-color);
-		margin-top: 21px;
+
 		border-radius: 2px;
 		left: 0;
 	}
@@ -669,15 +679,29 @@ button {
 
 	.main-adress {
 		font-style: normal;
+		padding-top: 16px;
+		padding-bottom: 16px;
+	}
+	.mobile-open-button {
+		display: none;
+	}
+	.adress-list {
+		display: flex;
+		flex-direction: column;
+		row-gap: 12px;
+		padding-left: 0;
+		margin-top: 0;
+		margin-bottom: 0;
 	}
 	.adress-item-link {
 		font-family: inherit;
-		font-size: 16px;
-		line-height: 1.5;
+		font-size: 12px;
+		line-height: 117%;
 		letter-spacing: 0.02em;
 		color: inherit;
 		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	}
+
 	.adress-item-link:hover,
 	.adress-item-link:focus {
 		color: var(--hover-state-color);
@@ -732,6 +756,7 @@ button {
 		column-gap: 24px;
 		row-gap: 64px;
 		align-items: center;
+		justify-content: center;
 	}
 	.team-list-item {
 		flex-basis: calc((100% - 24px) / 2);
@@ -789,19 +814,21 @@ button {
 		padding-bottom: 120px;
 	}
 
-	.mobile-open-button {
-		display: none;
-	}
-	.main-adress {
-		display: block;
-	}
 	.main-adress > ul {
-		display: flex;
+		flex-direction: row;
 		gap: 40px;
+	}
+	.adress-item-link {
+		font-size: 16px;
 	}
 
 	.main-adress {
 		margin-left: auto;
+		display: flex;
+		align-items: center;
+	}
+	.navigation-list-link-current-page-studio::after {
+		margin-top: 21px;
 	}
 	.hero-section {
 		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -880,6 +907,9 @@ button {
 	}
 	.team-list {
 		flex-wrap: nowrap;
+	}
+	.team-list-item {
+		flex-basis: calc((100% - 72рх) / 4);
 	}
 	.customers-section {
 		padding-top: 120px;
